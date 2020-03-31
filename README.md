@@ -1,3 +1,62 @@
+Welcome to the react-easy-fields wiki!
+![React Easy Fields](https://i.ibb.co/8gPWYk9/Screenshot-from-2020-03-31-06-32-16.png)
+
+Step 1: **Form Fields**
+```
+const fields = [
+    {
+      label: 'First Name',
+      id: 'first_name'
+    },
+    {
+      label: 'Bio',
+      id: 'bio',
+      htmltype: 'textarea'
+    },
+    {
+      label: 'Gender',
+      id: 'gender',
+      htmltype: 'radio',
+      items: ['Men', 'Women']
+    },
+    {
+      label: 'I\'m agree to terms ',
+      id: 'agree',
+      htmltype: 'checkbox'
+    },
+    {
+      label: 'Country',
+      id: 'country',
+      htmltype: 'related',
+      items: [
+        {
+          label: 'Iran',
+          value: 1
+        },
+        {
+          label: 'USA',
+          value: 2
+        }
+      ]
+    }
+  ]
+```
+
+Step 2: **Submit Function**
+```
+const handleSubmit = data => {
+    // Api Implementation
+    console.log(data);
+  }
+```
+
+Step 3: **Enjoy**
+```
+<h1>React Easy Fields</h1>
+<DynamicForm fields={fields} onSubmit={handleSubmit} />
+```
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
